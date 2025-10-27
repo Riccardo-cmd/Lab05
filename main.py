@@ -125,9 +125,11 @@ def main(page: ft.Page):
         # Sezione 3
         ft.Divider(),
         ft.Text("Aggiungi Nuova Automobile", size=20),
-        input_marca,
-        input_modello,
-        input_anno,
+        ft.Row(
+            [input_marca, input_modello, input_anno],
+            alignment=ft.MainAxisAlignment.CENTER,
+            spacing=20
+        ),
         ft.Row(
             [ft.Text("Posti:", size=16), btn_remove_posti, txt_posti, btn_add_posti],
             alignment=ft.MainAxisAlignment.CENTER),
